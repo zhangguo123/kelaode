@@ -15,8 +15,8 @@ spring:
         git:
           uri: https://github.com/zhangguo123/kelaode
           searchPaths: sp-config
-          #username: your-username
-         # password: your-password
+          username: zhangguo123
+          password: 18335869563zh
         
     
   host: 192.168.67.130
