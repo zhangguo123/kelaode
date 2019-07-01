@@ -12,18 +12,17 @@ spring:
         native:
           search-locations: classpath:/config
 
-#        git:
-#          uri: https://github.com/你的用户路径/sp-config
-#          searchPaths: config
-#          username: your-username
-#          password: your-password
+        git:
+          uri: https://github.com/zhangguo123/kelaode
+          searchPaths: sp-config
+          #username: your-username
+         # password: your-password
         
     
-  rabbitmq:
-    host: 192.168.64.140
-    port: 5672
-    username: admin
-    password: admin
+  host: 192.168.67.130
+  port: 5672
+  username: admin
+  password: admin
 
     
 server:
