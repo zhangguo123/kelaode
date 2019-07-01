@@ -3,35 +3,36 @@ spring:
     name: config-server
     
     
-  profiles:
-    active: native
+ # profiles:
+ #   active: native
   
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+ #       native:
+ #         search-locations: classpath:/config
 
         git:
-          uri: https://github.com/zhangguo123/kelaode
-          searchPaths: sp-config
-          username: zhangguo123
-          password: 18335869563zh
+          uri: https://zhangguo123/sp-config
+#          searchPaths: config
+#          username: your-username
+#          password: your-password
         
     
-  host: 192.168.67.130
-  port: 5672
-  username: admin
-  password: admin
+  rabbitmq:
+    host: 192.168.67.130
+    port: 5672
+    username: admin
+    password: admin
 
     
 server:
   port: 6001
     
 eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
       
 management:
   endpoints:
