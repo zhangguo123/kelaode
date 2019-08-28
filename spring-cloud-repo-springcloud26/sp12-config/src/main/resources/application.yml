@@ -12,15 +12,24 @@ spring:
  #       native:
  #         search-locations: classpath:/config
 
+<<<<<<< master
         git:
           uri: https://zhangguo123/sp-config
+=======
+#        git:
+#          uri: https://github.com/你的用户路径/sp-config
+>>>>>>> 0419b1b 更改配置
 #          searchPaths: config
 #          username: your-username
 #          password: your-password
         
     
   rabbitmq:
+<<<<<<< master
     host: 192.168.67.130
+=======
+    host: 192.168.64.140
+>>>>>>> 0419b1b 更改配置
     port: 5672
     username: admin
     password: admin

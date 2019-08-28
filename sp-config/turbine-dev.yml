@@ -2,7 +2,7 @@ spring:
   application:
     name: turbin
   rabbitmq:
-    host: 192.168.64.140
+    host: 192.168.190.135
     port: 5672
     username: admin
     password: admin
@@ -12,9 +12,9 @@ server:
   port: 5001
   
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
       
 turbine:
   app-config: order-service, zuul
